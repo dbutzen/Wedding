@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[tblFamily]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Name] NVARCHAR(50) NOT NULL, 
+    [Code] NVARCHAR(50) NOT NULL, 
+    [Email] NVARCHAR(50) NULL
+)

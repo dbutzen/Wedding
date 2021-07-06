@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DTB.Wedding.BL.Models\DTB.Wedding.BL.Models.csproj" />
+    <ProjectReference Include="..\DTB.Wedding.PL\DTB.Wedding.PL.csproj" />
+  </ItemGroup>
+
+</Project>
