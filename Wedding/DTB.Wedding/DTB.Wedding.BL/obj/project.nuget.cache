@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HSZq8U7KKm0a7/krOaEP6MAK4xv210JZKaOy1T1CqflFp4czDxzgOhXVXN3RPuuAMDyEyKz8VuVyijrbtrW6Cg==",
+  "dgSpecHash": "XQvOzHJn3NGhyd5Uw+hWsbGWehLsDT5EBswkirgXjpuVOPD1yc+S4aRMgX0CJuzv2g9aLYKc5TPtO1LLI15MmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\DTB.Wedding.BL.csproj",
+  "projectFilePath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\DTB.Wedding.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dan\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Dan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

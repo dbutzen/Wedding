@@ -4,3 +4,8 @@ C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.DB\bin\Debug\DTB.Wedding.DB
 C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.DB\obj\Debug\DTB.Wedding.DB.sqlprojAssemblyReference.cache
 C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.DB\obj\Debug\DTB.Wedding.DB.dll
 C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.DB\obj\Debug\DTB.Wedding.DB.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.DB\bin\Debug\DTB.Wedding.DB.dacpac
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.DB\bin\Debug\DTB.Wedding.DB.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.DB\bin\Debug\DTB.Wedding.DB.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.DB\obj\Debug\DTB.Wedding.DB.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.DB\obj\Debug\DTB.Wedding.DB.pdb

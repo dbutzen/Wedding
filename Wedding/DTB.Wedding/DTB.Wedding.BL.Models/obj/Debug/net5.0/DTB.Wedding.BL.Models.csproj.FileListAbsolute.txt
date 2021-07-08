@@ -10,3 +10,15 @@ C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\
 C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.dll
 C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\ref\DTB.Wedding.BL.Models.dll
 C:\Users\Dan\Desktop\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\bin\Debug\net5.0\DTB.Wedding.BL.Models.deps.json
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\bin\Debug\net5.0\DTB.Wedding.BL.Models.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\bin\Debug\net5.0\ref\DTB.Wedding.BL.Models.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\bin\Debug\net5.0\DTB.Wedding.BL.Models.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.csprojAssemblyReference.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.AssemblyInfoInputs.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.AssemblyInfo.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.csproj.CoreCompileInputs.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\ref\DTB.Wedding.BL.Models.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL.Models\obj\Debug\net5.0\DTB.Wedding.BL.Models.pdb

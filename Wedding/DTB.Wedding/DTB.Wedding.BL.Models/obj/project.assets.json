@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj",
+      "projectUniqueName": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj",
       "projectName": "DTB.Wedding.BL.Models",
-      "projectPath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj",
+      "projectPath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj",
       "packagesPath": "C:\\Users\\Dan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\obj\\",
+      "outputPath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

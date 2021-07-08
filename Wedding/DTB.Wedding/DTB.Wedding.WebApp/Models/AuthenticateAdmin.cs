@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DTB.Wedding.WebApp.Controllers;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,6 @@ namespace DTB.Wedding.WebApp.Models
 {
     public static class AuthenticateAdmin
     {
-        public static bool IsAuthenticated()
-        {
-            if (HttpContext.Current.Session == null) return false;
-            else return HttpContext.Current.Session["user"] != null;
-        }
+        public static bool IsAuthenticated { get; set; }
     }
 }

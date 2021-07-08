@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y+xkUUCL79p80+OZszXHdkrVuTOle0+eZGtATqbzs0+mkAmzCsfPk6Q1HuKtQukBhnjAYXZQU/+mbYItkKoliw==",
+  "dgSpecHash": "gNG/OGUbk/kbHoTSlgCDCFbWZIDQVjWCUY/cZRkZhQ8iuUAcLLFusya/Oh1fyCJsgXh82iVHzJAlRNk8Aik9Ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.PL\\DTB.Wedding.PL.csproj",
+  "projectFilePath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.PL\\DTB.Wedding.PL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dan\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Dan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -6,12 +6,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using DTB.Wedding.BL;
 using DTB.Wedding.BL.Models;
+using Newtonsoft.Json;
+using DTB.Wedding.WebApp.Models;
 
 namespace DTB.Wedding.WebApp.Controllers
 {
     public class AdminLoginController : Controller
     {
-        
+        public string key { get; set; }
+        public User loggedInUser { get; set; }
 
         public ActionResult Login(string returnurl)
         {
@@ -25,17 +28,35 @@ namespace DTB.Wedding.WebApp.Controllers
         {
             try
             {
-                if (UserManager.Login(user))
+                if (UserManager.Login(user) != null)
                 {
                     // Successful login
-                    Session["user"] = user;
+                    loggedInUser = user;
+                    loggedInUser.SessionKey = Guid.NewGuid();
+                    key = JsonConvert.SerializeObject(loggedInUser.SessionKey);
+                    HttpContext.Session.SetString(key, user.SessionKey.ToString());
+                    AuthenticateAdmin.IsAuthenticated = true;
+                    return RedirectToPage("/Family/Index");
                 }
+                return View(user);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                ViewBag.Message = ex.Message;
+                return View(user);
             }
+        }
+
+        public ActionResult Logout()
+        {
+            if (HttpContext.Session.GetString(key) != null) {
+
+                loggedInUser.SessionKey = Guid.Empty;
+                HttpContext.Session.Remove(key);
+                key = null;
+                AuthenticateAdmin.IsAuthenticated = false;
+            }
+            return View();
         }
     }
 }

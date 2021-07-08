@@ -7388,11 +7388,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\DTB.Wedding.BL.csproj",
+      "projectUniqueName": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\DTB.Wedding.BL.csproj",
       "projectName": "DTB.Wedding.BL",
-      "projectPath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\DTB.Wedding.BL.csproj",
+      "projectPath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\DTB.Wedding.BL.csproj",
       "packagesPath": "C:\\Users\\Dan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\obj\\",
+      "outputPath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -7413,11 +7413,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj": {
-              "projectPath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj"
+            "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj": {
+              "projectPath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj"
             },
-            "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.PL\\DTB.Wedding.PL.csproj": {
-              "projectPath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.PL\\DTB.Wedding.PL.csproj"
+            "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.PL\\DTB.Wedding.PL.csproj": {
+              "projectPath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.PL\\DTB.Wedding.PL.csproj"
             }
           }
         }

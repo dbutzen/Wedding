@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tJqO9ariUWyiBsFWBHMyU3RcJRMuJQAaSo3Gv0ZPZ1xMZwcN82xjQya0kzqKWyeRaqHVl3dNqIPpE5Xbclgmqg==",
+  "dgSpecHash": "bcSrdQGI8FUR4OPLBSQcJuShHCQeRAHNMiD75pHOR2fGvl6I5GZeyfj32TP9+H5N/O1QhHYCkA7R5PP8vQpOlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dan\\Desktop\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj",
+  "projectFilePath": "C:\\tfs\\WeddingWebsite\\Wedding\\DTB.Wedding\\DTB.Wedding.BL.Models\\DTB.Wedding.BL.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

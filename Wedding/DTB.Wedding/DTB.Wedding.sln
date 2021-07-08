@@ -5,21 +5,25 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DTB.Wedding.DB", "DTB.Wedding.DB\DTB.Wedding.DB.sqlproj", "{25841612-6A73-4EC0-B558-230B8641783F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.BL.Models", "DTB.Wedding.BL.Models\DTB.Wedding.BL.Models.csproj", "{0BDD5937-5259-417D-B075-A26CB25D03C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.BL.Models", "DTB.Wedding.BL.Models\DTB.Wedding.BL.Models.csproj", "{0BDD5937-5259-417D-B075-A26CB25D03C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.BL", "DTB.Wedding.BL\DTB.Wedding.BL.csproj", "{FC07EFB3-C84D-4810-8AAA-0373E914F269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.BL", "DTB.Wedding.BL\DTB.Wedding.BL.csproj", "{FC07EFB3-C84D-4810-8AAA-0373E914F269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.PL", "DTB.Wedding.PL\DTB.Wedding.PL.csproj", "{703993FF-58C1-423E-AE91-3453F0333E65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.PL", "DTB.Wedding.PL\DTB.Wedding.PL.csproj", "{703993FF-58C1-423E-AE91-3453F0333E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.BL.Test", "DTB.Wedding.BL.Test\DTB.Wedding.BL.Test.csproj", "{AC3B3A3B-1C08-4513-BA5A-3A15743BF08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.BL.Test", "DTB.Wedding.BL.Test\DTB.Wedding.BL.Test.csproj", "{AC3B3A3B-1C08-4513-BA5A-3A15743BF08B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.PL.Test", "DTB.Wedding.PL.Test\DTB.Wedding.PL.Test.csproj", "{85BC907E-3C4E-4229-9C98-FD71372F44A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.PL.Test", "DTB.Wedding.PL.Test\DTB.Wedding.PL.Test.csproj", "{85BC907E-3C4E-4229-9C98-FD71372F44A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.API", "DTB.Wedding.API\DTB.Wedding.API.csproj", "{5F00AB00-7180-498E-B8EB-9495D944799B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.API", "DTB.Wedding.API\DTB.Wedding.API.csproj", "{5F00AB00-7180-498E-B8EB-9495D944799B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.API.Test", "DTB.Wedding.API.Test\DTB.Wedding.API.Test.csproj", "{726242CD-B822-4A52-938C-66CCB03FE040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.API.Test", "DTB.Wedding.API.Test\DTB.Wedding.API.Test.csproj", "{726242CD-B822-4A52-938C-66CCB03FE040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.WebApp", "DTB.Wedding.WebApp\DTB.Wedding.WebApp.csproj", "{920424C5-EBAB-42BD-9BCC-5BF058E22B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTB.Wedding.WebApp", "DTB.Wedding.WebApp\DTB.Wedding.WebApp.csproj", "{920424C5-EBAB-42BD-9BCC-5BF058E22B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.MVC", "DTB.Wedding.MVC\DTB.Wedding.MVC.csproj", "{BA13ACC5-0D09-4EDF-B7F8-AE3AF599A002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTB.Wedding.API2", "DTB.Wedding.API2\DTB.Wedding.API2.csproj", "{4F69A935-48D4-49DA-BF5A-5AD1D39C8E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,14 @@ Global
 		{920424C5-EBAB-42BD-9BCC-5BF058E22B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{920424C5-EBAB-42BD-9BCC-5BF058E22B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{920424C5-EBAB-42BD-9BCC-5BF058E22B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA13ACC5-0D09-4EDF-B7F8-AE3AF599A002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA13ACC5-0D09-4EDF-B7F8-AE3AF599A002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA13ACC5-0D09-4EDF-B7F8-AE3AF599A002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA13ACC5-0D09-4EDF-B7F8-AE3AF599A002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F69A935-48D4-49DA-BF5A-5AD1D39C8E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F69A935-48D4-49DA-BF5A-5AD1D39C8E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F69A935-48D4-49DA-BF5A-5AD1D39C8E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F69A935-48D4-49DA-BF5A-5AD1D39C8E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

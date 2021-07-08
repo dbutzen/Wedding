@@ -1,0 +1,17 @@
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.BL.deps.json
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.BL.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\ref\DTB.Wedding.BL.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.BL.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.BL.Models.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.PL.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.BL.Models.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\bin\Release\net5.0\DTB.Wedding.PL.pdb
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.csprojAssemblyReference.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.AssemblyInfoInputs.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.AssemblyInfo.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.csproj.CoreCompileInputs.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.csproj.CopyComplete
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\ref\DTB.Wedding.BL.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.BL\obj\Release\net5.0\DTB.Wedding.BL.pdb
