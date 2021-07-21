@@ -41,6 +41,35 @@ namespace DTB.Wedding.BL
             }
         }
 
+        public async static Task<Family> LoadById(Guid id)
+        {
+            try
+            {
+                Family family = new Family();
+                await Task.Run(() =>
+                {
+                    using (WeddingEntities dc = new WeddingEntities())
+                    {
+                        foreach (TblFamily f in dc.TblFamilies.ToList())
+                        {
+                            if (f.Id == id)
+                            {
+                                family.Id = f.Id;
+                                family.Name = f.Name;
+                                family.Code = f.Code;
+                            }
+                        }
+                    }
+                });
+                return family;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public async static Task<bool> Insert(Family family, bool rollback = false)
         {
             try

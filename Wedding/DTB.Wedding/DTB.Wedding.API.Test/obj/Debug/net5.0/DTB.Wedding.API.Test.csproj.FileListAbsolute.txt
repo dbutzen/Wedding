@@ -288,3 +288,9 @@ C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\obj\Debug\net5.0\
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\obj\Debug\net5.0\ref\DTB.Wedding.API.Test.dll
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\obj\Debug\net5.0\DTB.Wedding.API.Test.pdb
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\obj\Debug\net5.0\DTB.Wedding.API.Test.genruntimeconfig.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.API.Test\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

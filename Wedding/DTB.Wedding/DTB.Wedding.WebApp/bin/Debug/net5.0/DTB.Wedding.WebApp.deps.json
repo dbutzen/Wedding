@@ -33,7 +33,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Newtonsoft.Json": "13.0.1",
           "System.Net.Http": "4.3.4",
-          "System.Net.Http.Formatting.Extension": "5.2.3",
           "bootstrap": "5.0.2",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -1691,27 +1690,6 @@
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
-        }
-      },
-      "System.Net.Http.Formatting.Extension/5.2.3": {
-        "runtime": {
-          "lib/System.Net.Http.Extensions.dll": {
-            "assemblyVersion": "2.2.29.0",
-            "fileVersion": "2.2.29.0"
-          },
-          "lib/System.Net.Http.Formatting.dll": {
-            "assemblyVersion": "5.2.3.0",
-            "fileVersion": "5.2.30128.0"
-          },
-          "lib/System.Net.Http.Primitives.dll": {
-            "assemblyVersion": "4.2.29.0",
-            "fileVersion": "4.2.29.0"
-          }
-        },
-        "compile": {
-          "lib/System.Net.Http.Extensions.dll": {},
-          "lib/System.Net.Http.Formatting.dll": {},
-          "lib/System.Net.Http.Primitives.dll": {}
         }
       },
       "System.Net.NameResolution/4.3.0": {
@@ -4721,13 +4699,6 @@
       "sha512": "sha512-aOa2d51SEbmM+H+Csw7yJOuNZoHkrP2XnAurye5HWYgGVVU54YZDvsLUYRv6h18X3sPnjNCANmN7ZhIPiqMcjA==",
       "path": "system.net.http/4.3.4",
       "hashPath": "system.net.http.4.3.4.nupkg.sha512"
-    },
-    "System.Net.Http.Formatting.Extension/5.2.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-BlYwj3Mbgc2i+NqtBZ+bea3LiN9WuGpE8PCylBvhxV0wBs0XTkXJmDuzkNnUyPhDBqKMBwDK0ZCnwJ8LpQ0aEg==",
-      "path": "system.net.http.formatting.extension/5.2.3",
-      "hashPath": "system.net.http.formatting.extension.5.2.3.nupkg.sha512"
     },
     "System.Net.NameResolution/4.3.0": {
       "type": "package",

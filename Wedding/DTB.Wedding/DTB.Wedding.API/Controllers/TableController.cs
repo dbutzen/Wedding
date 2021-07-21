@@ -39,7 +39,7 @@ namespace DTB.Wedding.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         /// 
-        /*
+        
         [HttpGet("{id:Guid}")]
         public async Task<ActionResult<Table>> Get(Guid id)
         {
@@ -52,7 +52,7 @@ namespace DTB.Wedding.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-        */
+        
 
         /// <summary>
         /// Insert a new item

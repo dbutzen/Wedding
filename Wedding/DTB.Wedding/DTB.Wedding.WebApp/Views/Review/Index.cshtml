@@ -1,0 +1,169 @@
+﻿@model DTB.Wedding.WebApp.ViewModels.WeddingViewModel
+<!--IEnumerable<DTB.Wedding.WebApp.ViewModels.FamilyGuestViewModel>-->
+
+@{
+    ViewData["Title"] = "Review";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var TotalYes = 0; //done
+    var TotalNo = 0; //done
+    var TotalRemaining = 0; //done
+    var TotalGuests = 0; //done
+    var PercentYes = 0; //Done
+    var Responded = 0;
+
+    @foreach (var item in Model.families)
+    {
+        foreach (var modelItem in item.guests)
+        {
+            TotalGuests++;
+            if (modelItem.Responded == true)
+            {
+                Responded++;
+                if (modelItem.Attendance == true)
+                {
+                    TotalYes++;
+                }
+                else
+                {
+                    TotalNo++;
+                }
+                if (modelItem.PlusOne == true)
+                {
+                    TotalGuests++;
+                    if (modelItem.PlusOneAttendance == true)
+                    {
+                        TotalYes++;
+                    }
+                    else
+                    {
+                        TotalNo++;
+                    }
+                }
+            }
+            else //Responded == false
+            {
+                if (modelItem.PlusOne == true){
+                    TotalGuests++;
+                }
+            }
+        }
+    }
+    if(Responded > 0)
+    {
+        PercentYes = TotalYes / (TotalYes + TotalNo);
+    }
+    TotalRemaining = TotalGuests - TotalYes - TotalNo;
+
+
+
+}
+
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <td>
+                Total Yes
+            </td>
+            <td>
+                Total No
+            </td>
+            <td>
+                Total Remaining
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @TotalYes
+            </td>
+            <td>
+                @TotalNo
+            </td>
+            <td>
+                @TotalRemaining
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table-bordered">
+
+    <thead>
+        <tr>
+            <th>Family</th>
+            <th>Name</th>
+            <th>Response</th>
+            <th>Plus One Response</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.families)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(i => item.family.Name)
+                </td>
+            </tr>
+
+            @foreach (var modelItem in item.guests)
+            {
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => modelItem.Name)
+                    </td>
+                    <td>
+                        @if (modelItem.Responded == true)
+                        {
+
+
+                            if (modelItem.Attendance == true)
+                            {
+
+                                @:Attending
+                            }
+                            else
+                            {
+                                @:Not Attending
+                            }
+                        }
+                        else
+                        {
+                            @:No Response
+                        }
+                    </td>
+                    <td>
+                        @if (modelItem.Responded == true && modelItem.PlusOne == true)
+                        {
+                            if (modelItem.PlusOneAttendance == true)
+                            {
+                                @:Plus One Attending
+                            }
+                            else
+                            {
+                                @:Plus One Not Attending
+                            }
+                        }
+                        else if (modelItem.Responded == false && modelItem.PlusOne == true)
+                        {
+                            @:No Response
+                        }
+                        else
+                        {
+                            @:N/A
+                        }
+                    </td>
+                </tr>
+
+            }
+
+
+        }
+    </tbody>
+</table>
+

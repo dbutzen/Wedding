@@ -27,7 +27,8 @@ namespace DTB.Wedding.PL
             if (!optionsBuilder.IsConfigured)
             {
 
-                optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectsV13;Database=DTB.Wedding.DB;Integrated Security=True");
+                //optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectsV13;Database=DTB.Wedding.DB;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Server=tcp:dtbwedding.database.windows.net,1433;Initial Catalog=DTB.Wedding.DB;Persist Security Info=False;User ID=danbutzen;Password=pass123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
                 
                 optionsBuilder.UseLazyLoadingProxies();
             }

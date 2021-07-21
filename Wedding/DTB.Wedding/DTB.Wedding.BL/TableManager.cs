@@ -42,6 +42,36 @@ namespace DTB.Wedding.BL
             }
         }
 
+        public async static Task<Table> LoadById(Guid id)
+        {
+            try
+            {
+                Table table = new Table();
+                await Task.Run(() =>
+                {
+                    using (WeddingEntities dc = new WeddingEntities())
+                    {
+                        foreach (TblTable t in dc.TblTables.ToList())
+                        {
+                            if (t.Id == id)
+                            {
+                                table.Id = t.Id;
+                                table.Name = t.Name;
+                                table.NumberChairs = t.NumberChairs;
+
+                            };
+                        }
+                    }
+                });
+                return table;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public async static Task<bool> Insert(Table table, bool rollback = false)
         {
             try

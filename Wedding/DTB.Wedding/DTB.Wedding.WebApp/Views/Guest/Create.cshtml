@@ -1,0 +1,59 @@
+﻿@model DTB.Wedding.WebApp.ViewModels.GuestFamilyTableViewModel
+
+@{
+    ViewData["Title"] = "Create New Guest";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<hr />
+
+@using (Html.BeginForm("Create", "Guest"))
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        @Html.LabelFor(model => model.Guest.Name, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Guest.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Guest.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <div>
+                Has plus one
+                @Html.RadioButtonFor(model => model.Guest.PlusOne, "true", new { @class = "form-control col-md-4" })
+                @Html.ValidationMessageFor(model => model.Guest.Name, "", new { @class = "text-danger col-md-4" })
+            </div>
+            <div>
+                No plus one
+                @Html.RadioButtonFor(model => model.Guest.PlusOne, "false", new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(model => model.Guest.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Families, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Guest.FamilyId, new SelectList(Model.Families, "Id", "Name", Model.Guest), null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Guest.FamilyId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default btn-primary" />
+        </div>
+    </div>
+</div>
+}
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<DTB.Wedding.BL.Models.Guest>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>RSVP Code</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Family Code Entry</h1>
+    <p>Please enter your family code. Reminder: code is case sensitive and has no spaces.</p>
+
+    @using (Html.BeginForm("Index", "RSVPForm"))
+    {
+        <input type="text" id="txtFamilyCode" name="txtFamilyCode" />
+        <input type="submit" value="Submit Code">
+    }
+</div>

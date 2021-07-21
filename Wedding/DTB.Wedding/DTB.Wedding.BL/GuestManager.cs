@@ -47,6 +47,97 @@ namespace DTB.Wedding.BL
             }
         }
 
+        public async static Task<List<Guest>> LoadById(Guid id)
+        {
+            try
+            {
+                List<Guest> guests = new List<Guest>();
+                await Task.Run(() =>
+                {
+                    using (WeddingEntities dc = new WeddingEntities())
+                    {
+                        foreach (TblGuest f in dc.TblGuests.ToList())
+                        {
+                            if (f.Id == id)
+                            {
+                                Guest guest = new Guest
+                                {
+                                    Id = f.Id,
+                                    Name = f.Name,
+                                    FamilyId = f.FamilyId,
+                                    TableId = f.TableId,
+                                    PlusOne = f.PlusOne,
+                                    Attendance = f.Attendance,
+                                    PlusOneAttendance = f.PlusOneAttendance,
+                                    Responded = f.Responded
+
+                                };
+                                guests.Add(guest);
+                            }
+                        }
+                    }
+                });
+                return guests;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public async static Task<List<Guest>> LoadByFamilyCode(string familyCode)
+        {
+            try
+            {
+                List<Guest> guests = new List<Guest>();
+                await Task.Run(() =>
+                {
+                    using (WeddingEntities dc = new WeddingEntities())
+                    {
+                        Family family = new Family();
+
+                        foreach (TblFamily f in dc.TblFamilies.ToList())
+                        {
+                            if (f.Code == familyCode)
+                            {
+                                family.Id = f.Id;
+                                family.Code = f.Code;
+                                family.Name = f.Name;
+                            }
+                        }
+                        if (family != null) {
+                            foreach (TblGuest g in dc.TblGuests.ToList())
+                            {
+                                if (g.FamilyId == family.Id)
+                                {
+                                    Guest guest = new Guest
+                                    {
+                                        Id = g.Id,
+                                        Name = g.Name,
+                                        FamilyId = g.FamilyId,
+                                        TableId = g.TableId,
+                                        PlusOne = g.PlusOne,
+                                        Attendance = g.Attendance,
+                                        PlusOneAttendance = g.PlusOneAttendance,
+                                        Responded = g.Responded
+
+                                    };
+                                    guests.Add(guest);
+                                }
+                            }
+                        }
+                    }
+                });
+                return guests;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public async static Task<bool> Insert(Guest guest, bool rollback = false)
         {
             try

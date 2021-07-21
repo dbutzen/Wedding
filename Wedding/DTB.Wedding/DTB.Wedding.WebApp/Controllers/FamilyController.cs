@@ -1,5 +1,5 @@
-﻿using DTB.Wedding.BL;
-using DTB.Wedding.BL.Models;
+﻿using DTB.Wedding.BL.Models;
+using DTB.Wedding.WebApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 namespace DTB.Wedding.WebApp.Controllers
@@ -18,32 +19,42 @@ namespace DTB.Wedding.WebApp.Controllers
         private static HttpClient InitializationClient()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44320/");
+            //client.BaseAddress = new Uri("https://localhost:44320/");
 
-            //client.BaseAddress = new Uri("https://danaudreyweddingapi.azurewebsites.net/");
+            client.BaseAddress = new Uri("https://danaudreyweddingapi.azurewebsites.net/");
             return client;
         }
 
-        public ActionResult Get()
+        public ActionResult Index()
         {
-            HttpClient client = InitializationClient();
+            if (AuthenticateAdmin.IsAuthenticated == true)
+            {
+                HttpClient client = InitializationClient();
 
-            // Do the actual call to the WebAPI
-            HttpResponseMessage reponse = client.GetAsync("Family").Result;
-            //Parse the result
-            string result = reponse.Content.ReadAsStringAsync().Result;
-            //Parse the result into generic objects
-            dynamic items = (JArray)JsonConvert.DeserializeObject(result);
-            //Pase the items into a list of family
-            List<Family> families = items.ToObject<List<Family>>();
+                // Do the actual call to the WebAPI
+                HttpResponseMessage reponse = client.GetAsync("Family").Result;
+                //Parse the result
+                string result = reponse.Content.ReadAsStringAsync().Result;
+                //Parse the result into generic objects
+                dynamic items = (JArray)JsonConvert.DeserializeObject(result);
+                //Pase the items into a list of family
+                List<Family> families = items.ToObject<List<Family>>();
+                List<Family> familiesByName = families.OrderBy(o => o.Name).ToList();
+                ViewBag.Source = "Index";
+                return View("Index", familiesByName);
+            }
+            else
+            {
+                return RedirectToAction("Login", "AdminLogin");
+            }
 
-            ViewBag.Source = "Get";
-            return View("Index", families);
-
+            
         }
 
-        public ActionResult GetOne(int id)
+        public ActionResult Details(Guid id)
         {
+            if(AuthenticateAdmin.IsAuthenticated == true) 
+            { 
             HttpClient client = InitializationClient();
 
             // Do the actual call to the WebAPI
@@ -54,23 +65,34 @@ namespace DTB.Wedding.WebApp.Controllers
             Family family = JsonConvert.DeserializeObject<Family>(result);
 
             return View("Details", family);
+            }
+            else
+            {
+                return RedirectToAction("Login", "AdminLogin");
+            }
         }
 
-        public ActionResult Insert()
+        public ActionResult Create()
         {
+            if (AuthenticateAdmin.IsAuthenticated == true) { 
             HttpClient client = InitializationClient();
 
             Family family = new Family();
             return View("Create", family);
+            }
+            else
+            {
+                return RedirectToAction("Login", "AdminLogin");
+            }
         }
         [HttpPost]
-        public ActionResult Insert(Family family)
+        public ActionResult Create(Family family)
         {
             try
             {
                 HttpClient client = InitializationClient();
                 HttpResponseMessage response = client.PostAsJsonAsync("Family", family).Result;
-                return RedirectToAction("Get");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -80,8 +102,9 @@ namespace DTB.Wedding.WebApp.Controllers
 
         }
 
-        public ActionResult Update(int id)
+        public ActionResult Edit(Guid id)
         {
+            if (AuthenticateAdmin.IsAuthenticated) { 
             HttpClient client = InitializationClient();
 
 
@@ -90,18 +113,23 @@ namespace DTB.Wedding.WebApp.Controllers
             Family family = JsonConvert.DeserializeObject<Family>(result);
 
             return View("Edit", family);
+            }
+            else
+            {
+                return RedirectToAction("Login", "AdminLogin");
+            }
         }
 
 
 
         [HttpPost]
-        public ActionResult Update(int id, Family family)
+        public ActionResult Edit(Guid id, Family family)
         {
             try
             {
                 HttpClient client = InitializationClient();
                 HttpResponseMessage response = client.PutAsJsonAsync("Family/" + id, family).Result;
-                return RedirectToAction("Get");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -111,23 +139,29 @@ namespace DTB.Wedding.WebApp.Controllers
 
         }
 
-        public ActionResult Remove(int id)
+        public ActionResult Delete(Guid id)
         {
+            if (AuthenticateAdmin.IsAuthenticated) { 
             HttpClient client = InitializationClient();
             HttpResponseMessage response = client.GetAsync("Family/" + id).Result;
             string result = response.Content.ReadAsStringAsync().Result;
             Family family = JsonConvert.DeserializeObject<Family>(result);
             return View("Delete", family);
+            }
+            else
+            {
+                return RedirectToAction("Login", "AdminLogin");
+            }
         }
 
         [HttpPost]
-        public ActionResult Remove(int id, Family family)
+        public ActionResult Delete(Guid id, Family family)
         {
             try
             {
                 HttpClient client = InitializationClient();
                 HttpResponseMessage response = client.DeleteAsync("Family/" + id).Result;
-                return RedirectToAction("Get");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {

@@ -1,87 +1,61 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DTB.Wedding.BL.Models;
+using DTB.Wedding.WebApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace DTB.Wedding.WebApp.Controllers
 {
     public class RSVPFormController : Controller
     {
+
+        private static HttpClient InitializeClient()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://danaudreyweddingapi.azurewebsites.net/");
+            return client;
+        }
         // GET: RSVPFormController
         public ActionResult Index()
         {
-            return View();
-        }
-
-        // GET: RSVPFormController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: RSVPFormController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: RSVPFormController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                string familyCode = Request.Form["txtFamilyCode"].ToString();
+                FamilyViewModel.familyCode = familyCode;
+
+
+                HttpClient client = InitializeClient();
+                HttpResponseMessage response;
+                string result;
+                dynamic items;
+
+                List<Guest> guests = null;
+                FamilyViewModel familyViewModel = new FamilyViewModel();
+
+                response = client.GetAsync("Guest/" + familyCode).Result;
+
+                result = response.Content.ReadAsStringAsync().Result;
+                items = (JArray)JsonConvert.DeserializeObject(result);
+                guests = items.ToObject<List<Guest>>();
+
+
+                FamilyViewModel.guestsInFamily = guests;
+
+                return View(guests);
             }
-            catch
+            catch (Exception)
             {
-                return View();
+
+                throw new Exception("Error with activation code. Codes are case sensitive and do not include spaces.");
             }
         }
 
-        // GET: RSVPFormController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: RSVPFormController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: RSVPFormController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: RSVPFormController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

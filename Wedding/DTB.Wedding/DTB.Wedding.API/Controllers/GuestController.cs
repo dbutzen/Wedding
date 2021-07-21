@@ -32,16 +32,8 @@ namespace DTB.Wedding.API.Controllers
             }
         }
 
-
-        /// <summary>
-        /// Get an item by id
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        /// 
-        /*
         [HttpGet("{id:Guid}")]
-        public async Task<ActionResult<Guest>> Get(Guid id)
+        public async Task<ActionResult<IEnumerable<Guest>>> Get(Guid id)
         {
             try
             {
@@ -49,10 +41,34 @@ namespace DTB.Wedding.API.Controllers
             }
             catch (Exception ex)
             {
+
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-        */
+
+        
+
+
+        /// <summary>
+        /// Get an item by family code
+        /// </summary>
+        /// <param name="familyCode"></param>
+        /// <returns></returns>
+        /// 
+
+        [HttpGet("{familyCode}")]
+        public async Task<ActionResult<Guest>> Get(string familyCode)
+        {
+            try
+            {
+                return Ok(await GuestManager.LoadByFamilyCode(familyCode));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+        
 
         /// <summary>
         /// Insert a new item

@@ -24,19 +24,27 @@ namespace DTB.Wedding.WebApp.Controllers
 
         [HttpPost]
 
-        public ActionResult Login(User user, string returnurl)
+        public ActionResult Login(User user, string returnurl = null)
         {
             try
             {
                 if (UserManager.Login(user) != null)
                 {
                     // Successful login
-                    loggedInUser = user;
+                    /*loggedInUser = user;
                     loggedInUser.SessionKey = Guid.NewGuid();
                     key = JsonConvert.SerializeObject(loggedInUser.SessionKey);
-                    HttpContext.Session.SetString(key, user.SessionKey.ToString());
+                    HttpContext.Session.SetString(key, user.SessionKey.ToString());*/
                     AuthenticateAdmin.IsAuthenticated = true;
-                    return RedirectToPage("/Family/Index");
+
+                    if (returnurl == null)
+                    {
+                        return RedirectToAction("Index", "Review");
+                    }
+                    else
+                    {
+                        return Redirect(returnurl);
+                    }
                 }
                 return View(user);
             }
@@ -49,13 +57,11 @@ namespace DTB.Wedding.WebApp.Controllers
 
         public ActionResult Logout()
         {
-            if (HttpContext.Session.GetString(key) != null) {
+            /*if (HttpContext.Session.GetString(key) != null) {
 
-                loggedInUser.SessionKey = Guid.Empty;
-                HttpContext.Session.Remove(key);
-                key = null;
                 AuthenticateAdmin.IsAuthenticated = false;
-            }
+            }*/
+            AuthenticateAdmin.IsAuthenticated = false;
             return View();
         }
     }

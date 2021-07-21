@@ -1,7 +1,7 @@
-﻿@model DTB.Wedding.WebApp.Models.Family
+﻿@model DTB.Wedding.BL.Models.Family
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Family Details";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -23,15 +23,9 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Code)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
 </div>

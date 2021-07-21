@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DTB.Wedding.WebApp.Models.Family>
+﻿@model IEnumerable<DTB.Wedding.BL.Models.Family>
 
 @{
     ViewData["Title"] = "Index";
@@ -19,9 +19,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Code)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -33,9 +30,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

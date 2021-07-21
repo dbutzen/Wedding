@@ -1,0 +1,48 @@
+﻿@model DTB.Wedding.BL.Models.Guest
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>RSVP for @Html.DisplayFor(model => model.Name)</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Guest RSVP</h1>
+    <p>Please fill out the RSVP form, then submit!</p>
+
+    @using (Html.BeginForm("Index", "RSVPThankYou"))
+{
+
+    <p>Will you be attending Audrianna and Daniel's wedding?</p>
+    @if (Model.Attendance == true){
+    <input type="radio" id="rdoAttendanceYes" name="rdoAttendance" value="Yes!" checked /><label>Yes!</label><br />
+    <input type="radio" id="rdoAttendanceNo" name="rdoAttendance" value="No." /><label>No.</label><br />
+    }
+    else {
+    <input type="radio" id="rdoAttendanceYes" name="rdoAttendance" value="Yes!" /><label>Yes!</label><br />
+    <input type="radio" id="rdoAttendanceNo" name="rdoAttendance" value="No." checked /><label>No.</label><br />
+    }
+    @if (Model.PlusOne == true)
+    {
+    <p>Will you be bringing a plus one?</p>
+    @if (Model.PlusOneAttendance == true)
+        {
+    <input type="radio" id="rdoPlusOneYes" name="rdoPlusOneAttendance" value="Yes!" checked /><label>Yes!</label><br />
+    <input type="radio" id="rdoPlusOneNo" name="rdoPlusOneAttendance" value="No." /><label>No.</label><br />
+        }
+        else {
+    <input type="radio" id="rdoPlusOneYes" name="rdoPlusOneAttendance" value="Yes!" /><label>Yes!</label><br />
+    <input type="radio" id="rdoPlusOneNo" name="rdoPlusOneAttendance" value="No." checked /><label>No.</label><br />
+        }
+    }
+
+        @Html.HiddenFor(Model => Model.Id)
+
+    <input type="submit" value="Submit Changes">
+    <!--Html.ActionLink("RSVP as this guest", "Index", "RSVPGuest", new { id = item.Id }, null)-->
+}
+</div>

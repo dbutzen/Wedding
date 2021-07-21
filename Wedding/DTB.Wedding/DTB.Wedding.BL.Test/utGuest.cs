@@ -19,6 +19,18 @@ namespace DTB.Wedding.BL.Test
         }
 
         [TestMethod]
+        public void LoadById()
+        {
+            var task = GuestManager.Load();
+            task.Wait();
+            var results = task.Result;
+            task = GuestManager.LoadById(results[0].Id);
+            task.Wait();
+            var results2 = task.Result;
+            Assert.IsNotNull(results2[0].Name != null);
+        }
+
+        [TestMethod]
         public void InsertTest()
         {
             var loadTask = FamilyManager.Load();
