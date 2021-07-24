@@ -4,10 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DTB.Wedding.BL;
 using DTB.Wedding.BL.Models;
 using Newtonsoft.Json;
 using DTB.Wedding.WebApp.Models;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DTB.Wedding.WebApp.Controllers
 {
@@ -15,6 +18,15 @@ namespace DTB.Wedding.WebApp.Controllers
     {
         public string key { get; set; }
         public User loggedInUser { get; set; }
+
+        private static HttpClient InitializeClient()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://danaudreyweddingapi.azurewebsites.net/");
+            return client;
+        }
+
+       
 
         public ActionResult Login(string returnurl)
         {
@@ -28,7 +40,13 @@ namespace DTB.Wedding.WebApp.Controllers
         {
             try
             {
-                if (UserManager.Login(user) != null)
+                HttpClient client = InitializeClient();
+                HttpResponseMessage response = client.GetAsync("User/" + user.Username).Result;
+                var result = response.Content.ReadAsStringAsync().Result;
+                dynamic item = (JObject)JsonConvert.DeserializeObject(result);
+                User userDB = item.ToObject<User>();
+
+                if (ComputeSha256Hash($"{user.Password}{userDB.UniqueKey.ToString().ToUpper()}") == userDB.Password )
                 {
                     // Successful login
                     /*loggedInUser = user;
@@ -46,12 +64,14 @@ namespace DTB.Wedding.WebApp.Controllers
                         return Redirect(returnurl);
                     }
                 }
-                return View(user);
+                ViewBag.Message = "Invalid User or Password";
+                return RedirectToAction("Login", "AdminLogin"); ;
             }
             catch (Exception ex)
             {
                 ViewBag.Message = ex.Message;
-                return View(user);
+                //return View(user);
+                return RedirectToAction("Login", "AdminLogin");
             }
         }
 
@@ -63,6 +83,20 @@ namespace DTB.Wedding.WebApp.Controllers
             }*/
             AuthenticateAdmin.IsAuthenticated = false;
             return View();
+        }
+
+        private static string ComputeSha256Hash(string rawData)
+        {
+            using (var sha = SHA256.Create())
+            {
+                var data = sha.ComputeHash(Encoding.Unicode.GetBytes(rawData));
+                var builder = new StringBuilder();
+                foreach (var d in data)
+                {
+                    builder.Append(d.ToString("X2"));
+                }
+                return builder.ToString();
+            }
         }
     }
 }

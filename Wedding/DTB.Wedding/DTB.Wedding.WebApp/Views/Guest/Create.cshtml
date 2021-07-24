@@ -30,9 +30,9 @@
             </div>
             <div>
                 No plus one
-                @Html.RadioButtonFor(model => model.Guest.PlusOne, "false", new { @class = "form-control" })
+                @Html.RadioButtonFor(model => model.Guest.PlusOne, "false", new { @class = "form-control col-md-4" })
 
-                @Html.ValidationMessageFor(model => model.Guest.Name, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Guest.Name, "", new { @class = "text-danger col-md-4" })
             </div>
         </div>
     </div>

@@ -170,3 +170,13 @@ C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\ref\DTB.Wedding.WebApp.dll
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\DTB.Wedding.WebApp.pdb
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\DTB.Wedding.WebApp.genruntimeconfig.cache
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\AboutUs\Index.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\AboutWedding\Index.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Gallery\Index.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Registry\Index.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Table\Create.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Table\Delete.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Table\Details.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Table\Edit.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Table\Index.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Release\net5.0\Razor\Views\Venue\Index.cshtml.g.cs

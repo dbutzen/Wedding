@@ -1,11 +1,10 @@
 ﻿@model IEnumerable<DTB.Wedding.BL.Models.Guest>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "RSVP for members on this invitation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
 
 
 
@@ -21,13 +20,13 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr style="color: #0f3015;">
 
                     <td>
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        @Html.ActionLink("RSVP as this guest", "Index", "RSVPGuest", new { id = item.Id }, null)
+                        @Html.ActionLink("RSVP as this guest", "Index", "RSVPGuest", new { id = item.Id }, htmlAttributes: new { @class="green-text"})
                     </td>
                     
                 </tr>

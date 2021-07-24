@@ -218,3 +218,5 @@ C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Debug\net5.0\Ra
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Debug\net5.0\Razor\Views\Table\Create.cshtml.g.cs
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Debug\net5.0\Razor\Views\Table\Edit.cshtml.g.cs
 C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Debug\net5.0\Razor\Views\Table\Delete.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Debug\net5.0\Razor\Views\AboutUs\Index.cshtml.g.cs
+C:\tfs\WeddingWebsite\Wedding\DTB.Wedding\DTB.Wedding.WebApp\obj\Debug\net5.0\Razor\Views\AboutWedding\Index.cshtml.g.cs

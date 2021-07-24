@@ -346,6 +346,9 @@ namespace DTB.Wedding.BL
         {
             user.Id = row.Id;
             user.Username = row.Username;
+            user.Password = row.Password;
+            user.SessionKey = row.SessionKey;
+            user.UniqueKey = row.UniqueKey;
         }
 
         private static string ComputeSha256Hash(string rawData)

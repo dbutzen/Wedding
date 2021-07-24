@@ -135,15 +135,33 @@ namespace DTB.Wedding.WebApp.Controllers
         public ActionResult Edit(Guid id)
         {
             if (AuthenticateAdmin.IsAuthenticated) { 
-            HttpClient client = InitializationClient();
+                HttpClient client = InitializationClient();
+
+                GuestFamilyTableViewModel gftvm = new GuestFamilyTableViewModel();
+
+                HttpResponseMessage response = client.GetAsync("Guest/" + id).Result;
+                string result = response.Content.ReadAsStringAsync().Result;
+                dynamic items = (JArray)JsonConvert.DeserializeObject(result);
+                List<Guest> guests = items.ToObject<List<Guest>>();
+
+                response = client.GetAsync("Family/").Result;
+                result = response.Content.ReadAsStringAsync().Result;
+                items = (JArray)JsonConvert.DeserializeObject(result);
+                List<Family> families = items.ToObject<List<Family>>();
+
+                response = client.GetAsync("Table/").Result;
+                result = response.Content.ReadAsStringAsync().Result;
+                items = (JArray)JsonConvert.DeserializeObject(result);
+                List<Table> tables = items.ToObject<List<Table>>();
+
+                gftvm.Families = families;
+                gftvm.Tables = tables;
+                gftvm.Id = id;
+                gftvm.Guest = guests[0];
 
 
-            HttpResponseMessage response = client.GetAsync("Guest/" + id).Result;
-            string result = response.Content.ReadAsStringAsync().Result;
-            dynamic items = (JArray)JsonConvert.DeserializeObject(result);
-            List<Guest> guests = items.ToObject<List<Guest>>();
 
-            return View("Edit", guests[0]);
+            return View("Edit", gftvm);
             }
             else
             {
